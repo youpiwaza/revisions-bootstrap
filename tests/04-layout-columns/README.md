@@ -8,4 +8,3 @@ da [link](https://getbootstrap.com/docs/5.1/layout/columns/).
 - modify groups of columns at the row level.
 - Possibilités de gérer les alignements, horizontaux & verticaux
 - Possibilité de faire du loat responsive
-
