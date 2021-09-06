@@ -12,4 +12,4 @@ L'adresse du [site officiel](https://getbootstrap.com/).
 - [Accéssibilité](https://getbootstrap.com/docs/5.1/getting-started/accessibility/) ok si le bon markup est utilisé
 - Possibilité de [customiser](https://getbootstrap.com/docs/5.1/customize/overview/) un peu tout en touchant au sass (plus simple, plein de variables)
   - Également possibilité de customiser via les [variables CSS](https://getbootstrap.com/docs/5.1/customize/css-variables/)
-- Performances > Utiliser `async` pour styles & js
+- [Performances](https://getbootstrap.com/docs/5.1/customize/optimize/) > Utiliser `async` pour styles & js
