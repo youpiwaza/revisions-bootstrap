@@ -27,9 +27,230 @@
       <!-- html content -->
       <h1>Layout > Columns</h1>
 
+      <div class="bd-example bd-example-row bd-example-row-flex-cols">
+        <h2>Alignment vertical</h2>
+        <p>Attention, la hauteur des conteneurs est fixée en css <code>.row{min-height:10rem}</code></p>
+        <h3>Depuis la ligne</h3>
+        <p><code>.row.align-items-start / .row.align-items-center / .row.align-items-end</code></p>
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              One of three columns
+            </div>
+            <div class="col">
+              One of three columns
+            </div>
+            <div class="col">
+              One of three columns
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
+              One of three columns
+            </div>
+            <div class="col">
+              One of three columns
+            </div>
+            <div class="col">
+              One of three columns
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col">
+              One of three columns
+            </div>
+            <div class="col">
+              One of three columns
+            </div>
+            <div class="col">
+              One of three columns
+            </div>
+          </div>
+        </div>
+
+        <h3>Ou la colonne</h3>
+        <p><code>.col.align-self-start / .col.align-self-center / .col.align-self-end</code></p>
+        <div class="container">
+          <div class="row">
+            <div class="col align-self-start">
+              One of three columns
+            </div>
+            <div class="col align-self-center">
+              One of three columns
+            </div>
+            <div class="col align-self-end">
+              One of three columns
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bd-example bd-example-row">
+        <h2>Alignment horizontal</h2>
+        <p>Comme flex</p>
+        <div class="container">
+          <div class="row justify-content-start">
+            <div class="col-4">
+              .justify-content-start
+            </div>
+            <div class="col-4">
+              One of two columns
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-4">
+              .justify-content-center
+            </div>
+            <div class="col-4">
+              One of two columns
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="col-4">
+              .justify-content-end
+            </div>
+            <div class="col-4">
+              One of two columns
+            </div>
+          </div>
+          <div class="row justify-content-around">
+            <div class="col-4">
+              .justify-content-around
+            </div>
+            <div class="col-4">
+              One of two columns
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-4">
+              .justify-content-between
+            </div>
+            <div class="col-4">
+              One of two columns
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-4">
+              .justify-content-evenly
+            </div>
+            <div class="col-4">
+              One of two columns
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bd-example bd-example-row">
+        <h2>Force column break</h2>
+        <p><code>&lt;div class="w-100">&lt;/div></code>, peut être responsive (ex: md+)<code>&lt;div class="w-100 d-none d-md-block">&lt;/div></code></p>
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        
+            <!-- Force next columns to break to new line -->
+            <div class="w-100"></div>
+        
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bd-example bd-example-row">
+        <h2>Reorder</h2>
+        <p><code>.col .order-1 .order-2 .order-3 .order-first .order-last</code></p>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              First in DOM, no order applied
+            </div>
+            <div class="col order-5">
+              Second in DOM, with a larger order <code>.order-5</code>
+            </div>
+            <div class="col order-1">
+              Third in DOM, with an order of 1 <code>.order-1</code>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col order-last">
+              First in DOM, ordered last <code>.order-last</code>
+            </div>
+            <div class="col">
+              Second in DOM, unordered
+            </div>
+            <div class="col order-first">
+              Third in DOM, ordered first <code>.order-first</code>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bd-example bd-example-row">
+        <h2>Offset / décalages</h2>
+        <p><code>.col-md-4 .offset-4 .offset-md-4</code>, reset offset en mettant à 0 <code>.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</code></p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 offset-4">.col-md-4 .offset-4</div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+            <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bd-example bd-example-row">
+        <h2>Margin / décalages</h2>
+        <p>Pas tt compris x)</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+            <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+          </div>
+          <div class="row">
+            <div class="col-auto me-auto">.col-auto .me-auto</div>
+            <div class="col-auto">.col-auto</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bd-example bd-example-row">
+        <h2>Standalone column classes</h2>
+        <p>Sans <code>.row</code>, afin de forcer la largeur des éléments</p>
+        <div class="container">
+          <div class="col-3 bg-light p-3 border">
+            .col-3: width of 25%
+          </div>
+          <div class="col-sm-9 bg-light p-3 border">
+            .col-sm-9: width of 75% above sm breakpoint
+          </div>
+        </div>
+
+        <h3>Responsive floating image</h3>
+        <div class="clearfix">
+          <!-- <img src="..." class="col-md-6 float-md-end mb-3 ms-md-3" alt="..."> -->
+          <svg class="bd-placeholder-img col-md-6 float-md-end mb-3 ms-md-3" width="100%" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive floated image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Responsive floated image</text></svg>
+          <p>A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.</p>
+          <p>As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.</p>
+          <p>And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laboriosam fuga odit, cum repellat ut eos adipisci assumenda mollitia. Tenetur maxime optio cupiditate neque, in ex alias iusto magnam quis!</p>
+        </div>
+      </div>
 
 
-      
+
       <!-- /.container -->
     </div>
     <!-- /.bd-example.bd-example-row -->
